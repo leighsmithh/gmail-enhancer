@@ -176,7 +176,7 @@ If you find this extension helpful, please:
 
 ## 🔗 Links
 
-- [Report Issues](https://github.com/yourusername/gmail-enhancer/issues)
-- [Feature Requests](https://github.com/yourusername/gmail-enhancer/issues/new)
+- [Report Issues](https://github.com/leighsmithh/gmail-enhancer/issues)
+- [Feature Requests](https://github.com/leighsmithh/gmail-enhancer/issues/new)
 - [Chrome Web Store](https://chrome.google.com/webstore) *(Coming Soon)*
 
