@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+    }
+
+    .header {
+      margin-bottom: 20px;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+    }
+
+    .header-text {
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 18px;
+      color: #202124;
+      font-weight: 500;
+    }
+
+    .header p {
+      margin: 5px 0 0 0;
+      font-size: 12px;
+      color: #5f6368;
+    }
+
+    .control-section {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .control-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .control-label {
+      font-size: 14px;
+      color: #202124;
+      font-weight: 500;
+    }
+
+    .control-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .control-btn {
+      width: 32px;
+      height: 32px;
+      border: 2px solid #dadce0;
+      background: white;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: bold;
+      color: #5f6368;
+      transition: all 0.2s ease;
+    }
+
+    .control-btn:hover {
+      border-color: #1a73e8;
+      color: #1a73e8;
+      background: #f8f9ff;
+    }
+
+    .control-btn:active {
+      transform: scale(0.95);
+    }
+
+    .control-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      border-color: #dadce0;
+      color: #5f6368;
+      background: #f8f9fa;
+    }
+
+    .control-btn:disabled:hover {
+      border-color: #dadce0;
+      color: #5f6368;
+      background: #f8f9fa;
+    }
+
+    .line-count-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 30px;
+    }
+
+    .line-count {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a73e8;
+      text-align: center;
+    }
+
+    .max-indicator {
+      font-size: 9px;
+      color: #ea4335;
+      font-weight: 500;
+      background: #fce8e6;
+      padding: 1px 4px;
+      border-radius: 8px;
+      margin-bottom: 2px;
+      display: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .preview-demo {
+      margin-top: 15px;
+      padding: 12px;
+      background: #f1f3f4;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #5f6368;
+      line-height: 1.4;
+    }
+
+    .disclaimer {
+      margin-top: 12px;
+      padding: 8px 12px;
+      background: #fff3cd;
+      border: 1px solid #ffeaa7;
+      border-radius: 6px;
+      font-size: 11px;
+      color: #856404;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .status {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 12px;
+      color: #137333;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .status.show {
+      opacity: 1;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 11px;
+      color: #5f6368;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <img src="logo 32.png" alt="Gmail Enhancer Logo" class="logo">
+      <div class="header-text">
+        <h1>Gmail Enhancer</h1>
+        <p>Control email preview lines</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="control-section">
+    <div class="control-group">
+      <span class="control-label">Preview Lines:</span>
+      <div class="control-buttons">
+        <button class="control-btn" id="decreaseBtn">−</button>
+        <div class="line-count-container">
+          <span class="max-indicator" id="maxIndicator">max</span>
+          <span class="line-count" id="lineCount">4</span>
+        </div>
+        <button class="control-btn" id="increaseBtn">+</button>
+      </div>
+    </div>
+    
+    <div class="preview-demo" id="previewDemo">
+      Email preview will show this many lines of text content for better scanning and readability in your Gmail inbox.
+    </div>
+    
+    <div class="disclaimer">
+      💡 If preview changes don't appear immediately, refresh your Gmail tab
+    </div>
+    
+    <div class="status" id="status">Settings saved!</div>
+  </div>
+
+  <div class="footer">
+    v1.0 • by Arcane
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html> 

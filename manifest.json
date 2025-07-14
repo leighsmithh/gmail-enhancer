@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Gmail Enhancer",
+    "version": "1.0",
+    "description": "Enhance Gmail with customizable email preview lines for better inbox scanning.",
+    "icons": {
+      "16": "logo 24.png",
+      "24": "logo 24.png",
+      "32": "logo 32.png",
+      "48": "logo 48.png",
+      "128": "logo 128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://mail.google.com/*"],
+        "js": ["content.js"],
+        "css": ["style.css"],
+        "run_at": "document_idle"
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "Gmail Enhancer Settings",
+      "default_icon": {
+        "16": "logo 24.png",
+        "24": "logo 24.png",
+        "32": "logo 32.png",
+        "48": "logo 48.png",
+        "128": "logo 128.png"
+      }
+    },
+    "permissions": ["scripting", "storage", "tabs"]
+  }
+  
