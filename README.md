@@ -9,7 +9,7 @@ A lightweight Chrome extension that enhances your Gmail experience by expanding 
 - **💾 Persistent Settings**: Your preferences are saved and synced across devices
 - **📖 Improved Readability**: Enhanced line-height and formatting for easier scanning
 - **⚡ Dynamic Updates**: Works seamlessly with Gmail's dynamic loading and navigation
-- **🔄 Auto-Refresh**: Maintains expanded previews when Gmail updates content
+- **🔄 Auto-Refresh**: Maintains expanded previews when Gmail updates content. Sometimes glitchy but static values work beyond refresh. 
 
 ## 🚀 Installation
 
